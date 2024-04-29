@@ -355,7 +355,7 @@ class RawSample {
             return;
         }
 
-        if (rb_during_gc()) {
+        if (false && rb_during_gc()) {
           gc = true;
         } else {
           len = rb_profile_frames(0, MAX_LEN, frames, lines);
